@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Home", 
+    "loc": "home"
+  }, 
+  {
+    "name": "Who We Are", 
+    "loc": "board"
+  }, 
+  {
+    "name": "Autism", 
+    "loc": "autism"
+  }, 
+  {
+    "name": "Tanzania", 
+    "loc": "tanzania"
+  },
+  {
+    "name": "Support",
+    "loc": "support"
+  },
+  {
+    "name": "Blog",
+    "loc": "blog"
+  },
+  {
+    "name": "Contact Us",
+    "loc": "contact"
+  }
+]

@@ -1,0 +1,215 @@
+
+@blue: #95B3D7;
+@yellow: #FFDF57;
+@green: #9BBB59;
+
+.iefix {
+behavior: url("PIE-1.0.0/PIE.htc");
+}
+
+img.social-icon {
+  margin-top: 10px;
+  width: auto; 
+  height: 35px;
+}
+
+.catch-phrase {
+
+}
+
+h1, h2, h3 {
+  border-bottom: solid @yellow;
+  border-top : solid @yellow;
+  color: darken(@green, 20%);
+}
+
+strong {
+  color: darken(@green, 20%);
+}
+
+#search {
+  width: 6em;
+}
+.top-bar>div {
+  padding: 0px !important;
+}
+
+.navbar-inner {
+  background: transparent !important;
+  background-image: none !important;
+  .iefix;
+}
+
+
+body {
+  background-color: #FEFEFA;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 small {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-size: x-large;
+  font-style: italic;
+}
+
+aside {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.menu-section {
+  font-size: large;
+  padding-left: 20px;
+  padding-right: 0px;
+}
+
+
+
+.top-bar > div {
+  padding: 10px;
+}
+
+.background-pattern {
+  .border-radius-mine(10px);
+  background-image: url('wavegrid.png');
+}
+.background-tint {
+  .border-radius-mine(10px);
+}
+
+
+.top-white {
+  .border-radius-mine(0px 0px 10px 0px); 
+}
+
+.top-bar {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 30px;
+  vertical-align: middle;
+  width: auto;
+  max-height: 95px;
+  height: 95px;
+}
+
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-pills > .active > a:focus {
+  color: #ffffff;
+  background-color: darken(@blue, 30%);
+}
+
+
+#donate {
+  background-color: darken(@green, 20%);
+  background-image: none !important;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+
+#donate:hover {
+  background-color: @green;
+  background-image: none !important;
+}
+
+.gradient(@light; @dark) {
+    background-image: -moz-linear-gradient(top, @light, @dark);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@light), to(@dark));
+    background-image: -webkit-linear-gradient(top, @light, @dark);
+    background-image: -o-linear-gradient(top, @light, @dark);
+    background-image: linear-gradient(to bottom, @light, @dark);
+}
+.horiz-gradient(@light; @dark) {
+    background-image: -moz-linear-gradient(left, @light, @dark);
+    background-image: -webkit-linear-gradient(left, @light, @dark);
+    background-image: -o-linear-gradient(left, @light, @dark);
+    background-image: linear-gradient(to right, @light, @dark);
+}
+
+.border-radius-mine (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.detail-section {
+  border-right: 1px dotted grey;
+}
+
+aside {
+  text-align: center;
+}
+
+.footer-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar .nav > .active > a {
+  color: white;
+  background-color: @blue;
+}
+
+.navbar .nav > .active > a:hover {
+  background-color: lighten(@blue, 20%);
+}
+
+a {
+  color: darken(@blue, 20%);
+  text-shadow: 0px 0px 0px !important;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: @blue;
+}
+
+.btn-primary {
+  background-color: darken(@green, 20%);
+  background-image: none !important;
+}
+
+.btn-primary:hover {
+  background-color: @green;
+  background-image: none !important;
+}
+
+
+
+.navbar {
+  margin-bottom: 0px;
+  border: 0px;
+}
+
+.navbar-inner {
+    background-image: none;
+    background: transparent;
+    border: none;
+    text-align: center;
+}
+.thumbnail.africa {
+  margin-top: 25px;
+}
+
+article {
+  padding: 20px;
+}
+
+li > a.thumbnail > img {
+	width: auto;
+	max-height: 150px;
+}
+
+
+
+
+

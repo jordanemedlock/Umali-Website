@@ -1,0 +1,4 @@
+/{text} -> pages/{text}.php
+/blog/{num} -> pages/blogs/$blogs[{num}]->loc.php
+/blog/{text} -> pages/blogs/{text}.php
+/blog/new -> pages/new_post.php
