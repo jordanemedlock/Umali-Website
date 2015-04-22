@@ -1,4 +1,6 @@
 <?php
+
+include_once 'settings.php';
 $pages = array();
 if ($fh = fopen("pages.json", "r")){
     $pages = json_decode(fread($fh, filesize("pages.json")), true);
@@ -15,9 +17,12 @@ if ($fh = fopen("pages.json", "r")){
     <?php 
     for ($i=0;$i<count($pages); $i++) {
         $page = $pages[$i];
-        $s = '<li class="'.$page["loc"].'"';
-        $s .= '><a href="#'.$page["loc"].'" data-toggle="collapse" data-target=".nav-collapse">';
-        $s .= $page["name"].'</a></li>'."\n";
+        $s = tag("li", 
+                 cls($page["loc"]), 
+                 linkTo($page["name"], 
+                        $page["loc"], 
+                        array("data-toggle"=>"collapse", 
+                              "data-target"=>".nav-collapse")));
         echo $s;
     } ?>
 </ul>
