@@ -1,9 +1,10 @@
 
 <?php
+include_once 'settings.php';
 if (!isset($_GET['loc'])){
   $blogs = array();
-  if ($fh = fopen('blogs.json', "r")){
-    $blogs = json_decode(fread($fh, filesize("blogs.json")));
+  if ($fh = fopen('pages/blogs.json', "r")){
+    $blogs = json_decode(fread($fh, filesize("pages/blogs.json")));
     fclose($fh);
   }
   ?>
@@ -28,14 +29,15 @@ if (!isset($_GET['loc'])){
       if (count($blogs) > 0){
         foreach ($blogs as $key => $blog) {
           echo '<div class="row-fluid" id="'.$key.'"><div class="span12 blog">';
-          if ($fh = fopen("blogs/".$blog->loc.".php", "r")){
-            $string = fread($fh, filesize("blogs/".$blog->loc.".php"));
+          if ($fh = fopen("pages/blogs/".$blog->loc.".php", "r")){
+            $string = fread($fh, filesize("pages/blogs/".$blog->loc.".php"));
             $array = array_splice(split('</p>', $string), 0, 3);
             $newString = join("</p>", $array).'</p>';
             echo $newString;
             fclose($fh);
           }
-          echo '<a href="#blog__'.$blog->loc.'" class="btn btn-primary">Read More...</a>';
+          // echo '<a href="#blog__'.$blog->loc.'" class="btn btn-primary">Read More...</a>';
+          echo linkTo("Read More...", "blogs__".$blog->loc, cls("btn-primary"), true);
           echo '</div></div>';
         }
       } else {
@@ -48,7 +50,7 @@ if (!isset($_GET['loc'])){
 } else {
   $loc = $_GET["loc"];
   $blogs = array();
-  if ($fh = fopen('blogs.json', "r")){
+  if ($fh = fopen('pages/blogs.json', "r")){
     $blogs = json_decode(fread($fh, filesize("blogs.json")));
     fclose($fh);
   }
@@ -65,7 +67,7 @@ if (!isset($_GET['loc'])){
             <a href="#blog" class="btn btn-primary back-btn">&lt;&lt; <span class="visible-phone">Back to blogs</span></a>
           </div>
           <div class="span10 blog">';
-  require   "blogs/".$loc.".php";
+  require   "pages/blogs/".$loc.".php";
   
   if ($prev){
     echo '      <a href="#blog__'.$prev->loc.'" class="btn btn-primary pull-left">&lt;&lt; '.$prev->title.'</a>';
