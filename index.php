@@ -1,8 +1,6 @@
 <?php
-include 'settings.php'
-
+include 'settings.php';
 $p = "home";
-
 if (isset($_GET["p"])) {
     $p = str_replace("__","/",$_GET["p"]);
 }
