@@ -1,6 +1,4 @@
-<?php
-include 'count_hits.php';
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
